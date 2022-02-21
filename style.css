@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-auto-columns: 50% 50%;
+    grid-template:
+      "header header"
+      "dashboard contact-list"
+      "footer footer";
+  }
+  
+  /*HEADER*/
+  
+  .header {
+    grid-area: header;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .header i::before {
+    padding-right: 10px;
+  }
+  
+  /*RIGHT BLOCK*/
+  
+  .contact-list {
+    display: inline-block;
+    grid-area: contact-list;
+  }
+  .tbl {
+    border: 0;
+    border-collapse: collapse;
+    margin: 20px 40px 20px 0;
+    overflow-y: scroll;
+    border-radius: 5px;
+    display: grid;
+    text-align: left;
+  }
+  .tbl tr {
+    display: flex;
+    overflow:hidden;
+  }
+  .tbl thead th {
+    background: #fff;
+    padding: 18px 30px;
+    font-size: 22px;
+    border-bottom: 1px solid #bfbfbf;
+    display: block;
+  }
+  .tbl td {
+    background: #fff;
+    border-bottom: 1px solid #bfbfbf;
+    font-size: 17px;
+    padding: 10px 0 10px 30px;
+    overflow-x: scroll;
+  }
+  
+  .tbl tbody {
+    display: block;
+    width: 100%;
+    height: 445px;
+    overflow-y: auto;
+  }
+  tbody > tr > :nth-child(3) {
+    padding: 10px 10px 0 0;
+    justify-content: center;
+  }
+  .rowInfo {
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .delFromTable,
+  .rowInfo {
+    color: #ccc;
+  }
+  .delFromTable:hover,
+  .rowInfo:hover {
+    color: #ff7b10;
+    cursor: pointer;
+  }
+  
+  /*LEFT BLOCK*/
+  
+  .dashboard {
+    align-items: center;
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  .search-field .field {
+    display: flex;
+    height: 50px;
+    margin: 20px 40px 20px 40px;
+    position: relative;
+    width: calc(100% / 2-13px);
+  }
+  
+  .dashboard-search form i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #ccc;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  
+  .dashboard-input {
+    vertical-align: middle;
+    grid-area: dashboard;
+    width: auto;
+    margin: auto 40px auto 40px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba (0, 0, 0, 0, 0.05);
+    position: center;
+  }
+  
+  .dashboard-input header {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #bfbfbf;
+  }
+  
+  form .dbl-field {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .dbl-field .field {
+    height: 50px;
+    display: flex;
+    position: relative;
+    width: calc(100% / 2-13px);
+  }
+  
+  .dashboard-input form i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #ccc;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  
+  form .field input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 18px 0 48px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .field input::placeholder {
+    color: #ccc;
+  }
+  .field input:focus {
+    padding-left: 47px;
+    border: 2px solid #ff7b10;
+  }
+  .field input:focus ~ i {
+    color: #ff7b10;
+  }
+  
+  .dashboard-input form {
+    margin: 20px 30px;
+  }
+  
+  form .dbl-field {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  form .dbl-field .field {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .button-area button {
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px;
+    padding: 13px 25px;
+    background: #ff7b10;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+  }
+  .button-area button:hover {
+    background: #ff6600;
+  }
+  
+  /*FOOTER*/
+  
+  .footer {
+    color: #ccc;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* CREDITS
+  SCROLLABLE TABLE: 
+  https://stackoverflow.com/questions/11891065/css-only-scrollable-table-with-fixed-headers
+  CONTACT STYLING:
+  https://codingnepalweb.com/demos/working-contact-form-php/
+  BACKGROUND:
+  https://webgradients.com/ (Morpheus den)
+  COLORS: 
+  tested for vision deficiencies.
+  */
+  
